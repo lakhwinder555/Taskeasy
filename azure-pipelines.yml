@@ -19,9 +19,9 @@ steps:
       [float]$des1 = $response.bpi.USD.rate
       [float]$des2 = $response.bpi.GBP.rate
       
-      $des3 =  $($des + $des1 + $des2)
+      [float]$des3 =  $($des + $des1 + $des2)
       
-      Write-Output [float]$des3
+      Write-Output $des3
 
 
 
