@@ -22,6 +22,7 @@ steps:
       $des3 =  $($des + $des1 + $des2)
       
       Write-Output "$des3"
+      write-host "$($des + $des1 + $des2)"
 
 
 
