@@ -15,9 +15,9 @@ steps:
       
       $response = Invoke-RestMethod 'https://api.coindesk.com/v1/bpi/currentprice.json' -Method 'GET' -Headers $headers
       $response | ConvertTo-Json
-      [int]$des = $response.bpi.EUR.rate
-      [int]$des1 = $response.bpi.USD.rate
-      [int]$des2 = $response.bpi.GBP.rate
+      [float]$des = $response.bpi.EUR.rate
+      [float]$des1 = $response.bpi.USD.rate
+      [float]$des2 = $response.bpi.GBP.rate
       
       $des3 =  $($des + $des1 + $des2)
       
