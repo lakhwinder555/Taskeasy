@@ -7,22 +7,11 @@ pool:
   - agent.name  -equals Agent1
 
 steps:
-- task: PowerShell@2
+- task: Bash@3
   inputs:
     targetType: 'inline'
     script: |
-      # Write your PowerShell commands here.
       
-      $response = Invoke-RestMethod 'https://api.coindesk.com/v1/bpi/currentprice.json' -Method 'GET' -Headers $headers
-      $response | ConvertTo-Json
-      [float]$des = $response.bpi.EUR.rate
-      [float]$des1 = $response.bpi.USD.rate
-      [float]$des2 = $response.bpi.GBP.rate
-      
-      [float]$des3 =  $($des + $des1 + $des2)
-      
-      Write-Output $des3
-
-
+      echo "Hello world"
 
 
