@@ -7,7 +7,10 @@ pool:
   demands:
   - agent.name  -equals Hello
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- 
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      echo 'Hello world'
