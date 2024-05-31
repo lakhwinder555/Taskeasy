@@ -1,0 +1,13 @@
+
+trigger:
+- main
+
+pool:
+  name: Agent1
+  demands:
+  - agent.name  -equals Hello
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- 
