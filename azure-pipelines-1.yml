@@ -12,4 +12,4 @@ steps:
     targetType: 'inline'
     script: |
      
-      echo 'Hello world'
+      echo 'Hello world 123'
