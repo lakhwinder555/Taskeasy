@@ -1,17 +1,10 @@
 trigger:
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Write your commands here
-      
-      echo 'Hello world'
 - main
 
 pool: 
-  name: Hello
+  name: Agent11
   demands:
-  - agent.name  -equals Agent1
+  - agent.name  -equals sachin
 
 steps:
 - task: Bash@3
