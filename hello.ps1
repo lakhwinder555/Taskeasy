@@ -1,8 +1,8 @@
 # hello.ps1
 Write-Output "Lakhwinder singh"
 
-    $a=3
-    $b=5
+    $a=100
+    $b=5o
     $c=$a+$b
     Write-Output("your answer is $c")
 
