@@ -1,8 +1,21 @@
-name: hello-world
-on: push
+name: Print Hello World using PowerShell
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
 jobs:
-  my-job:
-    runs-on: ubuntu-latest
+  hello-world:
+    runs-on: windows-latest
+
     steps:
-      - name: my-step
-        run: echo "Hello World!"
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Run PowerShell script
+      run: ./hello.ps1
+      shell: pwsh
