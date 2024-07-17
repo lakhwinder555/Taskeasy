@@ -1,2 +1,2 @@
 # hello.ps1
-Write-Output "Hello World"
+Write-Output "Lakhwinder singh"
